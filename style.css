@@ -251,7 +251,7 @@ body,html{
 .introduction h2{
   font-size: 36px;
   font-weight: 600;
-  color: green;
+  color: rgb(49, 11, 18);
 }
 /*introduction paragraph*/
 .introduction p{
@@ -365,7 +365,7 @@ footer{
 .bottom-bar p{
   color: #fff;
 }
-/* Responsive styles */
+/************************Responsive styles*************************/
 
 
 @media (max-width:700px){
