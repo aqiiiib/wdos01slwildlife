@@ -1,0 +1,422 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body,html{
+  background-color: #ec79791b;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+/*main image*/
+.header{
+  background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(Image/WilpattuNational\ Park.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+@media screen and (max-width: 767px){
+  .header{
+   height: 70vh;
+  }
+}
+
+
+/*desing for menu bar*/
+.menu ul{
+  float: right;
+  list-style: none;
+  margin-top: 30px;
+  min-height: 400px;
+  margin-right: 60px;
+  font-size: 15px;
+
+}
+.menu ul li{
+  display: inline-block;
+}
+.menu ul li a{
+  text-decoration:none ;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  transition: 0.5 ease;
+  
+}
+.menu ul li a:hover{
+  background-color: #fff;
+  color: #000;
+}
+.active{
+  background-color: red;
+}
+/*desing for logo*/
+.logo img{
+  float: left;
+  width: 200px;
+  height: 200px;
+  padding-left: 50px;
+  margin-top:-40px;
+  border-radius: 100%;
+}
+.header__content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header__content h1{
+  color: #fff;
+  font-size: 60px;
+  animation: neonLight 1.5s ease-in-out infinite alternate;
+  text-shadow: 
+  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20 #000,
+  0 0 30 #000,
+  0 0 40 #000,
+  0 0 50 #000,
+  0 0 60 #000,
+  0 0 70 #000;
+}
+@keyframes neonLight{
+  from{
+    text-shadow: 
+  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20px #000,
+  0 0 30px #000,
+  0 0 40px #000,
+  0 0 50px #000,
+  0 0 60px #000,
+  0 0 70px #000;
+  transform: scale(1);
+
+  }
+  to{
+    text-shadow: 
+  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20px #000,
+  0 0 30px #000,
+  0 0 40px #000,
+  0 0 50px #000,
+  0 0 60px #000,
+  0 0 70px #000,
+  0 0 80px #000,
+  0 0 90px #000,
+  0 0 100px #000,
+  0 0 110px #000;
+  transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__content{
+    top: 30%;
+  }
+  .header__content h1 {
+    font-size: 25px;
+  }
+}
+.dropdown{
+  display: none;
+  top: 6%;
+  position:absolute;
+  text-align: center;
+}
+.dropdown ul{
+  position:absolute;
+  display:inline;
+  text-size-adjust:initial;
+  text-decoration-color: #000;
+  text-align: right;
+  font-display:inline;
+}
+.dropdown ul li a{
+ display:inline-flex;
+ font-display: inline;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+}
+.menu ul li:hover .dropdown{
+  display: block;
+  position: absolute;
+  background-color: rgb(0, 45, 117);
+  margin-top: 10px;
+  margin-left: -8px;
+}
+
+
+.menu ul li:hover > .dropdown ul{
+  display: block;
+  margin: 10px;
+  height: auto;
+}
+.menu ul li:hover .dropdown ul li{
+  width: 75px;
+  padding: 10px;
+  border-bottom: 1px #fff;
+  background: transparent;
+  transition: 0.4 ease;
+  text-align: left;
+  border-radius: 0px;
+}
+/**************Responsive ****************/
+@media only  screen and (min-width: 768px) and (max-width: 991px) {
+  .menu ul li{
+    font-size: 16px;
+    margin: 0;
+  }
+  .menu ul li a{
+    padding: 5px 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav_icon,
+  #navTrigger{
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 767px) {
+  
+  .nav_icon{
+    display: block;
+    position: relative;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .menu ul{
+    position: fixed;
+    left: 0;
+    top: 72px;
+    padding: 0;
+    background: #022335;
+    z-index: 100;
+    height: calc(100% - 74px);
+    overflow: auto;
+    width: calc(100% - 100px);
+    transition: all 0.3s ease-out;
+    transform: translateX(-150%);
+  }
+  .menu ul li{
+    float: none;
+    margin: 0 !important;
+    border-bottom: 1px solid #fff;
+  }
+  .menu ul li a{
+    padding: 10px;
+  }
+  .menu > ul > li:hover > a{
+    background: #0a91da;
+    color: #fff;
+  }
+  .dropdown{
+    position: static;
+    pointer-events: auto;
+    opacity: 1;
+    
+  }
+  .dropdown ul li a{
+    padding-left: 30px;
+  }
+  .menu ul li:hover > .dropdown ul{
+    height: auto;
+  }
+    #navTrigger{
+      opacity: 0;
+      position: fixed;
+      width: 0;
+      height: 0;
+      margin: 0;
+    }
+    #navTrigger:checked + .menu{
+      transform: translateX(0%);
+    }  
+}
+
+    /*Introduction*/
+    .wilpattu-intro{
+     width: 80%;
+     margin: auto;
+     text-align: center;
+     padding-top: 20px;
+    }
+    .wilpattu-intro h1{
+      text-align: center;
+      font-size: 36px;
+      font-weight: 600;
+      padding-top: 20px;
+    }
+    .wilpattu-intro p{
+      text-align: center;
+      line-height: 22px;
+      padding: 30px;
+      font-weight: 300;
+    }
+    .wilpattu-ani{
+      
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 50px;
+      
+    }
+    .wilpattu-ani h1{
+      font-size: 36px;
+      font-weight: 600;
+      color: #000;
+      text-align: center;
+    }
+    .wilpattu-ani p{
+      text-align: center;
+      line-height: 22px;
+      padding: 20px;
+      font-weight: 300;
+    }
+    
+  /*******************Images of the section*************/
+  
+  .gallery{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 35rem;
+    margin-bottom: 10px;
+    margin-left: 25%;
+  }
+  .card{
+    position: relative;
+    left: 0;
+    width: 3rem;
+    border-radius: 5rem;
+    height: 20rem;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+    flex: .15;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .card img{
+    height: 20rem;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card:hover{
+    flex: 1 1 0;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+  @media (max-width: 768px){
+    .gallery{
+      width: 100%;
+      max-width: none;
+      margin-left: 0;
+    }
+    .card{
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+
+  
+  
+  /***********************Conservation section**********************/
+  .Conservation{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .Conservation h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+  }
+  .Conservation p{
+    text-align: center;
+    line-height: 22px;
+    padding: 20px;
+    font-weight: 300;
+  }
+/*desing for footer*/
+footer{
+  background-color: #111;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-content{
+  width: 100%;
+  padding: 0px 0px 50px;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
+}
+.social-icons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 50%;
+}
+.social-icons a i{
+  font-size: 2em;
+  color: #000;
+  opacity: 0.9;
+}
+/*hover effect on icons*/
+.social-icons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+.social-icons a:hover i{
+  color: #fff;
+  transition: 0.5s;
+}
+.footer-nav{
+  margin: 10px 0;
+}
+.footer-nav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footer-nav ul li a{
+  color: #fff;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footer-nav ul li a :hover{
+  opacity: 1;
+}
+.bottom-bar{
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.bottom-bar p{
+  color: #fff;
+}
+@media (max-width:700px){
+  .footer-nav ul{
+    flex-direction: column;
+  }
+  .footer-nav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
