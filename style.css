@@ -389,8 +389,8 @@ footer{
   color: #fff;
 }
 @media screen and (max-width: 767px){
-  .intro-header {
-    height: 60vh;
+  .intro-header{
+    height: 70vh;
   }
 }
 .header_content1 h1{
