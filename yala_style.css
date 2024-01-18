@@ -419,40 +419,6 @@ footer{
 .bottom-bar p{
   color: #fff;
 }
-/* Responsive styles */
-/*
-@media(max-width: 700px){
-  .header__content h1{
-    font-size: 17px;
-    text-align: center;
-  }
-  .menu ul li{
-    display: block;
-    
-  }
-  .menu ul{
-    position: absolute;
-    background: #ff000f;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: 0;
-    text-align: left;
-    z-index: 2;
-  }
-  .header menu nav{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ff000f;
-    border-top: 1px solid rgb(0, 0, 0,1);
-  }
-  .dropdown ul li{
-    width: 100%;
-  }
-}*/
-
 @media (max-width:700px){
   .footer-nav ul{
     flex-direction: column;
