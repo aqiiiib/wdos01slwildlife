@@ -71,46 +71,46 @@ body,html{
 }
 .header__content h1{
   color: #fff;
-  font-size: 60px;
+  font-size: 40px;
   animation: neonLight 1.5s ease-in-out infinite alternate;
   text-shadow: 
-  0 0 5px #fff,
-  0 0 10px #fff,
-  0 0 20 #000,
+  0 0 3px #fff,
+  0 0 6px #fff,
+  0 0 10px #000,
+  0 0 15px #000,
+  0 0 20px #000,
+  0 0 25px #000,
   0 0 30 #000,
-  0 0 40 #000,
-  0 0 50 #000,
-  0 0 60 #000,
-  0 0 70 #000;
+  0 0 35 #000;
 }
 @keyframes neonLight{
   from{
     text-shadow: 
-  0 0 5px #fff,
-  0 0 10px #fff,
+  0 0 3px #fff,
+  0 0 6px #fff,
+  0 0 10px #000,
+  0 0 15px #000,
   0 0 20px #000,
+  0 0 25px #000,
   0 0 30px #000,
-  0 0 40px #000,
-  0 0 50px #000,
-  0 0 60px #000,
-  0 0 70px #000;
+  0 0 35px #000;
   transform: scale(1);
 
   }
   to{
     text-shadow: 
-  0 0 5px #fff,
-  0 0 10px #fff,
+  0 0 3px #fff,
+  0 0 6px #fff,
+  0 0 10px #000,
+  0 0 15px #000,
   0 0 20px #000,
+  0 0 25px #000,
   0 0 30px #000,
+  0 0 35px #000,
   0 0 40px #000,
+  0 0 45px #000,
   0 0 50px #000,
-  0 0 60px #000,
-  0 0 70px #000,
-  0 0 80px #000,
-  0 0 90px #000,
-  0 0 100px #000,
-  0 0 110px #000;
+  0 0 55px #000;
   transform: scale(1.1);
   }
 }
@@ -217,7 +217,7 @@ body,html{
     color: #fff;
   }
   .dropdown{
-    position: static;
+    position: sticky;
     pointer-events: auto;
     opacity: 1;
     
@@ -235,7 +235,7 @@ body,html{
       height: 0;
       margin: 0;
     }
-    #navTrigger:checked + .menu{
+    #navTrigger:checked > .menu{
       transform: translateX(0%);
     }  
 }
